@@ -1,4 +1,4 @@
-.card { overflow: hidden; border: 1px solid var(--border); border-radius: var(--radius-2xl); }
+.card { display: block; overflow: hidden; border: 1px solid var(--border); border-radius: var(--radius-2xl); }
 .thumbWrap { overflow: hidden; }
 .thumb { width: 100%; height: 16rem; object-fit: cover; transition: transform .5s ease; display: block; }
 .card:hover .thumb { transform: scale(1.05); }

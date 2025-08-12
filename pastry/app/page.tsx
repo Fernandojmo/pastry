@@ -1,5 +1,5 @@
 import Hero from "@/components/hero/Hero";
-import HighlightGrid from "@/components/hightlightgrid/HightlightGrid";
+import HighlightGrid from "@/components/highlightgrid/HighlightGrid";
 import VideoBanner from "@/components/videobanner/VideoBanner";
 import AboutTeaser from "@/components/aboutteaser/AboutTeaser";
 import Gallery from "@/components/gallery/Gallery";

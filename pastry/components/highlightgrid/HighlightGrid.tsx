@@ -1,5 +1,5 @@
 import Link from "next/link";
-import styles from "./HightlightGrid.module.scss";
+import styles from "./HighlightGrid.module.scss";
 
 const HIGHLIGHTS = [
   { title: "The Collection", image: "/images/highlight-collection.jpg", href: "/creations" },
