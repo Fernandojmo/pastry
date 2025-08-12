@@ -1,6 +1,6 @@
 import ProductCard from "@/components/productcard/ProductCard";
 import { db } from "@/lib/firebase";
-import styles from "./creations.module.scss";
+import styles from "./contact.module.scss";
 
 interface Creation { id: string; title: string; image: string; description: string }
 
