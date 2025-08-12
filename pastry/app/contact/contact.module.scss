@@ -1,4 +1,4 @@
-// --- FILE: app/(pages)/contact/contact.module.scss ---
+
 .wrapper { padding-block: 6rem; }
 .form { margin-top: 2.5rem; display: grid; gap: 1.25rem; }
 .field { display: grid; gap: .5rem; }
@@ -12,6 +12,4 @@
   border-radius: var(--radius-xl);
   outline: none;
 }
-
-/* Importante: focos “locales”, no globales */
 .input:focus, .textarea:focus { box-shadow: 0 0 0 2px var(--fg); }
