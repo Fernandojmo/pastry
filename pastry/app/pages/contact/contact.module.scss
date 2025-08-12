@@ -1,0 +1,12 @@
+.wrapper { padding-block: 6rem; }
+.form { margin-top: 2.5rem; display: grid; gap: 1.25rem; }
+.field { display: grid; gap: .5rem; }
+label { font-size: .9rem; font-weight: 600; }
+input, textarea {
+  width: 100%;
+  border: 1px solid var(--border);
+  padding: .9rem 1rem;
+  border-radius: var(--radius-xl);
+  outline: none;
+}
+input:focus, textarea:focus { box-shadow: 0 0 0 2px var(--fg); }

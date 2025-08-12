@@ -1,0 +1,6 @@
+.box { border: 1px solid var(--border); border-radius: var(--radius-2xl); padding: 2.5rem 1.5rem; text-align: center; }
+.form { margin-top: 1rem; display: grid; grid-template-columns: 1fr; gap: .75rem; justify-content: center; }
+.form input { width: 100%; max-width: 28rem; border: 1px solid var(--border); padding: .9rem 1rem; border-radius: var(--radius-xl); outline: none; }
+.form input:focus { box-shadow: 0 0 0 2px var(--fg); }
+.fineprint { margin-top: .75rem; font-size: .8rem; color: var(--muted-fg); }
+@media (min-width: 640px) { .form { grid-template-columns: 1fr auto; } }

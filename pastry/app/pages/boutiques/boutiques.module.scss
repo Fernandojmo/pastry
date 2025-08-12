@@ -1,0 +1,8 @@
+.wrapper { padding-block: 6rem; }
+.grid {
+  margin-top: 2.5rem;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+  @media (min-width: 768px) { grid-template-columns: 1fr 1fr; }
+}

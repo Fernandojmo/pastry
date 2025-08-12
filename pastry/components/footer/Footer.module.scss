@@ -1,0 +1,14 @@
+.footer { border-top: 1px solid var(--border); }
+.inner {
+  padding: 2.5rem 1rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  font-size: .95rem;
+  color: var(--muted-fg);
+  flex-wrap: wrap;
+}
+.social { display: flex; gap: 1rem; }
+.social a { color: inherit; }
+.social a:hover { color: var(--fg); }
