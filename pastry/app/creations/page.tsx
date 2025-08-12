@@ -12,13 +12,17 @@ interface Creation {
 }
 
 export default async function CreationsPage() {
-  const snap = await db.collection("creations").get();
-  const creations: Creation[] = snap.docs.map((d) => ({
-    id: d.id,
-    ...(d.data() as Omit<Creation, "id">),
-  }));
+  let creations: Creation[] = [];
+  try {
+    const snap = await db.collection("creations").get();
+    creations = snap.docs.map((d) => ({
+      id: d.id,
+      ...(d.data() as Omit<Creation, "id">),
+    }));
+  } catch (err) {
+    console.error("Failed to fetch creations", err);
+  }
 
-console.log("imhere")
   return (
     <div className={`container ${styles.wrapper}`}>
       <h1 className="title">Creations</h1>
