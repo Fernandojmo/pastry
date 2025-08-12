@@ -18,6 +18,7 @@ export default async function CreationsPage() {
     ...(d.data() as Omit<Creation, "id">),
   }));
 
+console.log("imhere")
   return (
     <div className={`container ${styles.wrapper}`}>
       <h1 className="title">Creations</h1>

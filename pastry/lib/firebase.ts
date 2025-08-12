@@ -17,4 +17,4 @@ const app = getApps().length
     });
 
 export const db = getFirestore(app);
-export const bucket = getStorage(app).bucket();
+export const bucket = getStorage(app).bucket(process.env.storage_bucket);
