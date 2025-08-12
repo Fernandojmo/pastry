@@ -1,34 +1,27 @@
-"use client";
+import Hero from "@/components/hero/Hero";
+import HighlightGrid from "@/components/highlightgrid/HighlightGrid";
+import VideoBanner from "@/components/videobanner/VideoBanner";
+import AboutTeaser from "@/components/aboutteaser/AboutTeaser";
+import Gallery from "@/components/gallery/Gallery";
+import Newsletter from "@/components/newsletter/Newsletter";
 
-import { useEffect, useState } from "react";
-import { collection, getDocs } from "firebase/firestore";
-import { db } from "@/lib/firebase";
-import ProductCard from "@/components/productcard/ProductCard";
-import styles from "./creations.module.scss";
-
-type Creation = { id: string; title: string; image: string; description: string };
-
-export default function CreationsPage() {
-  const [creations, setCreations] = useState<Creation[]>([]);
-
-  useEffect(() => {
-    const fetchCreations = async () => {
-      const snapshot = await getDocs(collection(db, "creations"));
-      const items = snapshot.docs.map((doc) => ({ id: doc.id, ...(doc.data() as Omit<Creation, "id">) }));
-      setCreations(items);
-    };
-    fetchCreations();
-  }, []);
-
+export default function HomePage() {
   return (
-    <div className={`container ${styles.wrapper}`}>
-      <h1 className="title">Creations</h1>
-      <p className="muted">Seasonal pastries and signature pieces.</p>
-      <div className={styles.grid}>
-        {creations.map((c) => (
-          <ProductCard key={c.id} {...c} />
-        ))}
-      </div>
-    </div>
+    <>
+      <Hero />
+      <section className="container section">
+        <HighlightGrid />
+      </section>
+      <VideoBanner />
+      <section className="container section">
+        <AboutTeaser />
+      </section>
+      <section className="section">
+        <Gallery />
+      </section>
+      <section className="section">
+        <Newsletter />
+      </section>
+    </>
   );
 }
