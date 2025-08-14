@@ -16,9 +16,9 @@ export default async function CreationsPage() {
       <h1 className="title">Creations</h1>
       <p className="muted">Seasonal pastries and signature pieces.</p>
       <div className={styles.grid}>
-        {creations.map((c) => (
-          <ProductCard key={c.id} {...c} />
-        ))}
+        {/* {creations.map((c) => (
+          // <ProductCard key={c.id} {...c} />
+        ))} */}
       </div>
     </div>
   );

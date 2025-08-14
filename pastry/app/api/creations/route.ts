@@ -9,7 +9,7 @@ interface CreationData {
   recipe: string;
   image: string;
 }
-
+console.log("imhere2");
 export async function POST(req: Request) {
   const form = await req.formData();
   const title = form.get("title")?.toString() || "";
