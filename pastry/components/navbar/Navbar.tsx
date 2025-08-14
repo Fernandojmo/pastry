@@ -8,6 +8,7 @@ const NAV = [
   { href: "/boutiques", label: "Boutiques" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
+  {href: "/creations/new", label:"New"},
 ];
 
 export default function Navbar() {
