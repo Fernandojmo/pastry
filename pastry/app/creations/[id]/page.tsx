@@ -66,20 +66,7 @@ export default async function CreationDetailPage({
             </ul>
           </section>
         )}
-
-        {creation.steps && (
-          <section className={styles.section}>
-            <h2>Instructions</h2>
-            <ol>
-              {creation.steps.map((step, i) => (
-                <li key={i}>{step}</li>
-              ))}
-            </ol>
-          </section>
-        )}
-
-        {creation.recipe && <p className={styles.recipe}>{creation.recipe}</p>}
-
+@@ -117,44 +83,34 @@ export default async function CreationDetailPage({
         {(creation.history || creation.historyimg || creation.instagramlink) && (
           <section className={styles.historySection}>
             <h2>History</h2>
