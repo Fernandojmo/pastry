@@ -9,6 +9,12 @@ interface Creation {
   difficulty: string;
   time: string;
   recipe: string;
+  history?: string;
+  instagramlink?: string;
+  historyimg?: string;
+  images?: string[];
+  ingredients?: string[];
+  steps?: string[];
 }
 
 export default async function CreationsPage() {
