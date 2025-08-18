@@ -23,7 +23,7 @@ export default async function CreationDetailPage({
 }) {
   try {
     const docId = decodeId(params.id);
-    const snap = await db.collection("Creations").doc(docId).get();
+    const snap = await db.collection("creations").doc(docId).get();
     if (!snap.exists) {
       return (
         <div className={`container ${styles.wrapper}`}>
@@ -66,7 +66,19 @@ export default async function CreationDetailPage({
             </ul>
           </section>
         )}
-@@ -117,44 +83,34 @@ export default async function CreationDetailPage({
+          {creation.steps && (
+          <section className={styles.section}>
+            <h2>Instructions</h2>
+            <ol>
+              {creation.steps.map((step, i) => (
+                <li key={i}>{step}</li>
+              ))}
+            </ol>
+          </section>
+        )}
+
+        {creation.recipe && <p className={styles.recipe}>{creation.recipe}</p>}
+
         {(creation.history || creation.historyimg || creation.instagramlink) && (
           <section className={styles.historySection}>
             <h2>History</h2>

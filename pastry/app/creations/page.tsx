@@ -20,7 +20,7 @@ interface Creation {
 export default async function CreationsPage() {
   let creations: Creation[] = [];
   try {
-    const snap = await db.collection("Creations").get();
+    const snap = await db.collection("creations").get();
     creations = snap.docs.map((d) => ({
       id: d.id,
       ...(d.data() as Omit<Creation, "id">),
