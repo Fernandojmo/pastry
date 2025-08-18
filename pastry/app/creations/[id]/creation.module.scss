@@ -1,0 +1,65 @@
+.wrapper {
+  padding-block: 6rem;
+}
+
+.hero {
+  width: 100%;
+  border-radius: var(--radius-xl);
+  margin-top: 1.5rem;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.meta {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1rem;
+  color: var(--muted-fg);
+}
+
+.gallery {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.galleryImage {
+  width: 100px;
+  height: 100px;
+  border-radius: var(--radius-xl);
+  object-fit: cover;
+}
+
+.section {
+  margin-top: 2rem;
+}
+
+.section h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.recipe {
+  margin-top: 2rem;
+  line-height: 1.7;
+}
+
+.historySection {
+  margin-top: 2rem;
+}
+
+.historyImage {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: var(--radius-xl);
+  margin-block: 1rem;
+}
+
+.instagramLink {
+  color: var(--primary);
+  margin-top: 0.5rem;
+  display: inline-block;
+}
