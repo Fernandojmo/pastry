@@ -2,11 +2,18 @@ import { db } from "@/lib/firebase";
 import { decodeId } from "@/lib/id";
 import styles from "./creation.module.scss";
 
+
+interface Creation {
 interface Creation {
   title: string;
+  title: string;
+  image: string;
   image: string;
   difficulty: string;
+  difficulty: string;
   time: string;
+  time: string;
+  recipe: string;
   recipe: string;
   images?: string[];
   ingredients?: string[];
@@ -15,32 +22,59 @@ interface Creation {
   instagramlink?: string;
   historyimg?: string;
 }
+}
+
 
 export default async function CreationDetailPage({
+export default async function CreationDetailPage({
+  params,
   params,
 }: {
+}: {
+  params: { id: string };
   params: { id: string };
 }) {
+}) {
   try {
+  try {
+    const snap = await db.collection("creations").doc(params.id).get();
     const docId = decodeId(params.id);
     const snap = await db.collection("Creations").doc(docId).get();
     if (!snap.exists) {
+    if (!snap.exists) {
       return (
+      return (
+        <div className="container">
         <div className={`container ${styles.wrapper}`}>
           <p>Not found</p>
+          <p>Not found</p>
+        </div>
         </div>
       );
+      );
+    }
     }
 
+
+    const creation = snap.data() as Creation;
     const creation = snap.data() as Creation;
 
+
     return (
+    return (
+      <div className="container">
       <article className={`container ${styles.wrapper}`}>
         <h1 className="title">{creation.title}</h1>
+        <h1 className="title">{creation.title}</h1>
+        <img src={creation.image} alt={creation.title} />
         <img src={creation.image} alt={creation.title} className={styles.hero} />
+        <p>Difficulty: {creation.difficulty}</p>
         <div className={styles.meta}>
+        <p>Time: {creation.time}</p>
           <span>Difficulty: {creation.difficulty}</span>
+        <p>{creation.recipe}</p>
           <span>Time: {creation.time}</span>
+      </div>
         </div>
 
         {creation.images && (
@@ -105,12 +139,22 @@ export default async function CreationDetailPage({
         )}
       </article>
     );
+    );
+  } catch (err) {
   } catch (err) {
     console.error("Failed to load creation", err);
+    console.error("Failed to load creation", err);
     return (
+    return (
+      <div className="container">
       <div className={`container ${styles.wrapper}`}>
         <p>Error loading creation</p>
+        <p>Error loading creation</p>
+      </div>
       </div>
     );
+    );
   }
+  }
+}
 }
