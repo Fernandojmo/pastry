@@ -7,3 +7,23 @@
   @media (min-width: 640px) { grid-template-columns: 1fr 1fr; }
   @media (min-width: 1024px) { grid-template-columns: 1fr 1fr 1fr; }
 }
+
+.grid input,
+.grid textarea,
+.grid button {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+}
+
+.grid textarea {
+  min-height: 8rem;
+  resize: vertical;
+}
+
+.grid button {
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+}
