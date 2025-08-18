@@ -13,13 +13,14 @@ export default function NewCreationPage() {
         <input type="text" name="title" placeholder="Title" required />
         <input type="text" name="difficulty" placeholder="Difficulty" required />
         <input type="text" name="time" placeholder="Time" required />
-        <textarea name="recipe" placeholder="Recipe" required />
+        <textarea name="recipe" placeholder="Recipe" required rows={6} />
         <textarea
           name="ingredients"
           placeholder="Ingredients (one per line)"
+          rows={5}
         />
-        <textarea name="steps" placeholder="Steps (one per line)" />
-        <textarea name="history" placeholder="History" />
+        <textarea name="steps" placeholder="Steps (one per line)" rows={5} />
+        <textarea name="history" placeholder="History" rows={5} />
         <input type="text" name="instagramlink" placeholder="Instagram link" />
         <input type="file" name="image" accept="image/*" required />
         <input type="file" name="historyimg" accept="image/*" />
