@@ -1,5 +1,6 @@
 import Link from "next/link";
 import styles from "./ProductCard.module.scss";
+import { encodeId } from "@/lib/id";
 
 type Props = {
   id: string;
@@ -11,8 +12,9 @@ type Props = {
 };
 
 export default function ProductCard({ id, title, image, difficulty, time, recipe }: Props) {
+  const encoded = encodeId(id);
   return (
-    <Link href={`/creations/${id}`} className={styles.card}>
+    <Link href={`/creations/${encoded}`} className={styles.card}>
       <div className={styles.thumbWrap}>
         <img src={image} alt={title} className={styles.thumb} />
       </div>

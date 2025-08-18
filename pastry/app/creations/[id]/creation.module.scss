@@ -1,0 +1,46 @@
+.wrapper {
+  padding-block: 6rem;
+}
+
+.hero {
+  width: 100%;
+  border-radius: var(--radius-xl);
+  margin-top: 1.5rem;
+}
+
+.meta {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1rem;
+  color: var(--muted-fg);
+}
+
+.gallery {
+  margin-top: 2rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+  @media (min-width: 640px) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.galleryImage {
+  width: 100%;
+  border-radius: var(--radius-xl);
+}
+
+.section {
+  margin-top: 2rem;
+}
+
+.section h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.recipe {
+  margin-top: 2rem;
+  line-height: 1.7;
+}
