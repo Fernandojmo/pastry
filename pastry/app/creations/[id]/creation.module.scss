@@ -6,6 +6,8 @@
   width: 100%;
   border-radius: var(--radius-xl);
   margin-top: 1.5rem;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
 }
 
 .meta {
@@ -17,17 +19,16 @@
 
 .gallery {
   margin-top: 2rem;
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: 1fr;
-  @media (min-width: 640px) {
-    grid-template-columns: 1fr 1fr;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 
 .galleryImage {
-  width: 100%;
+  width: 100px;
+  height: 100px;
   border-radius: var(--radius-xl);
+  object-fit: cover;
 }
 
 .section {
@@ -43,4 +44,22 @@
 .recipe {
   margin-top: 2rem;
   line-height: 1.7;
+}
+
+.historySection {
+  margin-top: 2rem;
+}
+
+.historyImage {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: var(--radius-xl);
+  margin-block: 1rem;
+}
+
+.instagramLink {
+  color: var(--primary);
+  margin-top: 0.5rem;
+  display: inline-block;
 }
