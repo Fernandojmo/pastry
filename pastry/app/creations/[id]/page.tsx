@@ -113,4 +113,8 @@ export default async function CreationDetailPage({
       </div>
     );
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> e32328e3613e26002aed3596ba01ac07fc8ac487
